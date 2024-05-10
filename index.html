@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="script.js">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <img class="logo" src="img/logo2.jpeg" alt="logo">
+        <div class="navbar-content">
+            <!-- <img class="logo" src="img/logo.jpeg" alt="logo"> -->
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#maps">Maps</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- --------------------------------------------------------------------------------- -->
+    <div class="content">
+        <div id="section1" class="section">
+
+            <div class="home">
+                <h1>Your Safety, Our Priority</h1>
+            </div>
+        
+            <div class="container">
+                <h1>Search your area's Weather Details here !</h1>
+                <input type="text" id="search" placeholder="Enter location" autocomplete="off">
+                <button id="searchButton">Search</button>
+                <p id="location">Enter a location to get weather information.</p>
+                <p id="temperature"></p>
+                <div id="additionalInfo">
+                </div>
+            </div>
+        </div>
+
+    <!-- map---------------------------------------------------------------------------------------- -->
+
+    <div id="section2" class="section">
+        <section id="maps">
+            <div id="map-container">
+                <h2>Interactive Map</h2>
+                <div id="map"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- about---------------------------------------------------------------------------------------------- -->
+
+        <section id="about" class="section">
+            <h2 class="title">About</h2>
+            <div class="about-content">
+                <!-- Content for the left section -->
+                <div class="left-section">
+                    <p>Welcome to our college team project website! We are a group of passionate students from [Name of College/University] who have come together to work on this project with the goal of creating something meaningful and impactful. Get to know more about us below:</p>
+            
+                    <h3 class="subheading">Our Mission:</h3>
+                    <p>At [Name of College/University], we believe in the power of collaboration and innovation. Our mission is to leverage our diverse skills and backgrounds to develop solutions that address real-world challenges and make a positive difference in our community and beyond.</p>
+            
+                    <h3 class="subheading">Our Vision:</h3>
+                    <p>We are committed to pioneering innovative solutions in disaster management and risk mitigation. Our vision is to leverage technology and collaboration to empower individuals, communities, and organizations to better prepare for, respond to, and recover from disasters.</p>
+                    <h3 class="subheading">Get in Touch:</h3>
+                    <p>We'd love to hear from you! Whether you have questions, feedback, or ideas for collaboration, please feel free to reach out to us. You can contact us via email at [Email Address] or connect with us on [Social Media Platforms].</p>
+
+                    <div class="icons">
+                        <a href="#" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter" target="_blank"></ion-icon></a>
+                        <a href="#" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-whatsapp" target="_blank"></ion-icon></a>
+                    </div>
+                    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+                </div>
+                
+                <!-- Image for the right section -->
+                <div class="right-section">
+                    <img src="img/about.webp" alt="Image">
+                </div>
+            </div>
+        </section>
+        
+    <!-- resources -------------------------------------------------------------------------------------------------- -->
+
+            <!-- Content sections -->
+        <section id="resources" class="section">
+            <h2 class="title">Resources</h2>
+            <div id="resources" class="resources">
+                <!-- emergprot -->
+                <div class="emergprot">
+                    <img src="img/Emergency.jpeg" class="emergprot-img-top" alt="...">
+                    <div class="emergprot-body box-content">
+                        <h5 class="emergprot-title box-title">Emergency Protocols</h5>
+                        <p class="emergprot-text box-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a class="box-button" href="emergprot/index.html">VISIT</a>
+                    </div>
+                </div>
+                <!-- Evacuation -->
+                <div class="Evacuation">
+                    <img src="img/Evacuation routes.jpg" class="Evacuation-img-top" alt="...">
+                    <div class="Evacuation-body box-content">
+                        <h5 class="Evacuation-title box-title">Evacuation routes</h5>
+                        <p class="Evacuation-text box-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a class="box-button" href="Evacuation/index.html">VISIT</a>
+                    </div>
+                </div>
+                <!-- guide -->
+                <div class="guide">
+                    <img src="img/Guide.jpg" class="guide-img-top" alt="...">
+                    <div class="guide-body box-content">
+                        <h5 class="guide-title box-title">Disaster Preparedness Guide</h5>
+                        <p class="guide-text box-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a class="box-button" href="guide/index.html">VISIT</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- contact--------------------------------------------------------------------------------------------- -->
+
+    <div id="section5" class="section">
+        <h1 class="title">Contact Us</h1>
+        <div class="contact-container">
+            <div class="contact-left">
+                <section id="contact-form">
+                    <form action="#">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="16" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </section>
+            </div>
+            <div class="contact-right">
+                <section id="contact-info">
+                    <h2>Contact Information</h2>
+                    <p>Phone: (555) 555-5555</p>
+                    <p>Email: info@yourwebsite.com</p>
+                    <p>Address: 123 Main Street, Anytown, CA 12345</p>
+                </section>
+                <section id="maped" class="location">
+                    <h2>Location</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.897969945!2d77.04417211070437!3d28.527554409214392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1714145958414!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer--------------------------------------------------------------------------------------- -->
+    <footer>
+        <p>&copy; © 2024 Disaster Management Website. All rights reserved.</p>
+    </footer>
+
+    <!-- js-------------------------------------------------------------------------------------- -->
+    <!-- Add this script tag below the Leaflet CSS link -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([20.5937, 78.9629], 5); // Centered on India
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Function to display weather conditions and potential risks in a popup when marker is clicked
+        function displayWeatherAndRisks(lat, lon, popup) {
+            var apiKey = '6d8d917f3ebbed1428843ca75b820b36';
+            var weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey;
+
+            fetch(weatherUrl)
+                .then(response => response.json())
+                .then(data => {
+                    var weatherInfo = '<b>Weather Conditions</b><br>';
+                    weatherInfo += 'Temperature: ' + (data.main.temp - 273.15).toFixed(1) + '°C<br>'; // Convert Kelvin to Celsius
+                    weatherInfo += 'Description: ' + data.weather[0].description;
+                    popup.setContent(weatherInfo + '<br><br><b>Potential Risks</b><br>'); // Start with weather info, then add risks
+                    // Add potential risks based on location
+                    if (lat === 28.6139 && lon === 77.2090) { // Delhi
+                        popup.setContent(popup.getContent() + 'Flood Risk: Delhi is prone to flooding during heavy rainfall.');
+                    } else if (lat === 18.5204 && lon === 73.8567) { // Pune
+                        popup.setContent(popup.getContent() + 'Earthquake Risk: Pune is located in a seismically active zone.');
+                    } else if (lat === 20.2666 && lon === 85.8430) { // Bhubaneswar
+                        popup.setContent(popup.getContent() + 'Cyclone Risk: Bhubaneswar is vulnerable to cyclones during certain seasons.');
+                    } else if (lat === 11.4118 && lon === 76.6951) { // Coonoor
+                        popup.setContent(popup.getContent() + 'Landslide Risk: Coonoor is susceptible to landslides, especially during the monsoon season.');
+                    } else {
+                        popup.setContent(popup.getContent() + 'No specific risks identified for this location.'); // Default message
+                    }
+                })
+                .catch(error => console.error('Error fetching weather data:', error));
+        }
+
+        // Adding markers for potential risks and hazards
+        var floodMarker = L.marker([28.6139, 77.2090]).addTo(map);
+        floodMarker.bindPopup("<b>Delhi</b>").on('click', function() {
+            displayWeatherAndRisks(28.6139, 77.2090, floodMarker.getPopup());
+        });
+
+        var earthquakeMarker = L.marker([18.5204, 73.8567]).addTo(map);
+        earthquakeMarker.bindPopup("<b>Pune</b>").on('click', function() {
+            displayWeatherAndRisks(18.5204, 73.8567, earthquakeMarker.getPopup());
+        });
+
+        var cycloneMarker = L.marker([20.2666, 85.8430]).addTo(map);
+        cycloneMarker.bindPopup("<b>Bhubaneswar</b>").on('click', function() {
+            displayWeatherAndRisks(20.2666, 85.8430, cycloneMarker.getPopup());
+        });
+
+        var landslideMarker = L.marker([11.4118, 76.6951]).addTo(map);
+        landslideMarker.bindPopup("<b>Coonoor</b>").on('click', function() {
+            displayWeatherAndRisks(11.4118, 76.6951, landslideMarker.getPopup());
+        });
+
+        // Add more markers for other locations with potential risks and hazards
+    </script>
+
+<!-- weatherapp----------------------------------------------------------------------------------- -->/
+
+<script>
+
+    async function fetchWeather(location) {
+        const url = `https://weatherapi-com.p.rapidapi.com/current.json?q=${encodeURIComponent(location)}`;
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': 'e750805a40msh42a931ec44be007p109d74jsnba66f6685fa2',
+                'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+            }
+        };
+    
+        try {
+            const response = await fetch(url, options);
+            if (!response.ok) {
+                throw new Error("Weather data not available for this location.");
+            }
+    
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error(error);
+            return null;
+        }
+    }
+    
+    
+    async function updateWeather() {
+        const locationElement = document.getElementById("location");
+        const temperatureElement = document.getElementById("temperature");
+        const additionalInfoElement = document.getElementById("additionalInfo");
+    
+        
+        const locationInput = document.getElementById("search").value;
+    
+        if (!locationInput) {
+            alert("Please enter a location.");
+            return;
+        }
+    
+        locationElement.textContent = "Loading...";
+        temperatureElement.textContent = "Not Found!";
+        additionalInfoElement.innerHTML = "";
+    
+        const weatherData = await fetchWeather(locationInput);
+    
+        if (weatherData && weatherData.error) {
+            locationElement.textContent = "Location not found";
+            temperatureElement.textContent = "";
+        } else if (weatherData) {
+            locationElement.textContent = `Location: ${weatherData.location.name}, ${weatherData.location.country}`;
+            temperatureElement.textContent = `Temperature: ${weatherData.current.temp_c}°C`;
+    
+            additionalInfoElement.innerHTML = `
+                <p>Humidity: ${weatherData.current.humidity}%</p>
+                <p>Wind Speed: ${weatherData.current.wind_kph} km/h</p>
+                <p>Weather Condition: ${weatherData.current.condition.text}</p>
+            `;
+        }
+    }
+           
+            const searchButton = document.getElementById("searchButton");
+            searchButton.addEventListener("click", updateWeather);
+        </script>
+
+
+
+</body>
+</html>
